@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #87CEEB, #4682B4);
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+#data-display {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f4f6f9;
+    border-radius: 6px;
+    min-height: 200px;
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.temperature {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0.5rem 0;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.detail-item {
+    text-align: center;
+    padding: 0.6rem;
+    background-color: #ecf0f1;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #1e90ff;
+}
+
+button {
+    min-width: 120px;
+    padding: 0.8rem 1.5rem;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1259c3;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+}
+
+.error-message {
+    color: #ff4c4c;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #ffe6e6;
+    border-radius: 6px;
+}
+
+.initial-text {
+    text-align: center;
+    color: #555;
+    padding: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+
+    .temperature {
+        font-size: 2rem;
+    }
+}
